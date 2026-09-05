@@ -1,0 +1,41 @@
+{
+  "name": "srp-event",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server/index.js",
+    "build": "tsc -b && vite build",
+    "start": "NODE_ENV=production node server/index.js",
+    "test": "node --test tests/*.test.js",
+    "typecheck": "tsc -b",
+    "test:e2e": "node scripts/browser-tests.mjs",
+    "pretest:e2e": "npm run build",
+    "format:check": "prettier --check \"src/**/*.{tsx,css}\" \"server/*.js\" \"tests/**/*.{js,ts}\" \"scripts/*.mjs\" \"*.{ts,json,html,md}\""
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.3.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.8.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@sparticuz/chromium": "^149.0.0",
+    "@types/node": "^22.18.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^4.7.0",
+    "prettier": "^3.9.6",
+    "sharp": "^0.35.4",
+    "typescript": "~5.9.2",
+    "vite": "^6.3.5"
+  },
+  "description": "Осенний игровой ивент Discord-сообщества SRP",
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
